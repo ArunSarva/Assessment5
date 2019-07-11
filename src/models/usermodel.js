@@ -5,30 +5,35 @@ const Schema = mongoose.Schema
 const DownloadSchema = new Schema({
     FirstName: {
         type: String,
-        required: 'File Name required'
+        required: 'First Name required'
     },
     LastName: {
         type: String,
-        required: 'File Name required'
+        required: 'Last Name required'
     },
     Email: {
         type: String,
-        required: 'File Name required'
+        required: 'Email required',
+        unique: true,
+        match:/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/        
     },
     Password: {
         type: String,
-        required: 'File Name required'
+        required: 'Password required',
+        match: /(?=.*[a-zA-Z0-9]).*/
     },
     ConfromPassword: {
         type: String,
-        required: 'File Name required'
+        required: 'password not match',
     },
     Created_at: {
         type: Date,
-        required: 'File Name required'
+        default:Date.now
+        
     },
     Updated_at: {
-        type: Date
+        type: Date,
+        default:Date.now
     }
 })
  
