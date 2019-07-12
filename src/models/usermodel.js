@@ -19,7 +19,7 @@ const DownloadSchema = new Schema({
     },
     Password: {
         type: String,
-        required: 'Password required',
+        required: 'valid Password required',
         match: /(?=.*[a-zA-Z0-9]).*/
     },
     ConfromPassword: {

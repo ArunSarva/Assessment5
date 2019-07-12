@@ -1,4 +1,4 @@
-import { addNewDownload, getDownloads, getDownload, updateDownload, deleteDownload } from '../Controller/usercontroller'
+import { addNewDownload, getDownloads, getLogin, updateDownload, deleteDownload } from '../Controller/usercontroller'
 const { check, validationResult } = require('express-validator');
 var passwordValidator = require('password-validator');
 import * as EmailValidator from 'email-validator';
@@ -34,6 +34,9 @@ app.post('/sign_up', [
 // to get all data 
 app.route('/sign_up')
 .get(getDownloads)
+// to login 
+app.route('/Login')
+.post(getLogin)
     //     .get(getDownload)
     //     .put(updateDownload)
     //     .delete(deleteDownload)
