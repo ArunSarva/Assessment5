@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "cryptr": "^4.0.2",
     "email-validator": "^2.0.4",
     "express": "^4.17.1",
